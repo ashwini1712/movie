@@ -11,3 +11,10 @@ export const addFavourite = (n) => {
     payload: n,
   };
 };
+
+export const addWatchlater = (n) => {
+  return {
+    type: "WATCHLATER",
+    payload: n,
+  };
+};

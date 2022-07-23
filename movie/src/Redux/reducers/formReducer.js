@@ -7,6 +7,9 @@ const formReducer = (state = initialValue, action) => {
     case "FAVOURITE": {
       return action.payload;
     }
+    case "WATCHLATER": {
+      return action.payload;
+    }
     default: {
       return state;
     }

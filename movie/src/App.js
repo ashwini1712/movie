@@ -3,7 +3,7 @@ import AddMovie from "./components/AddMovie";
 import ShowMovies from "./components/ShowMovies";
 
 const App = (props) => {
-  const [pageHandle, setPageHandle] = useState(true);
+  const [pageHandle, setPageHandle] = useState(false);
   return (
     <div>
       {pageHandle ? (

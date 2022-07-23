@@ -124,6 +124,7 @@ button {
 }
 @media (max-width: 480px) {
 	.column.is-one-quarter img {
+		display:flex;
 		width: 100%;
 		margin-bottom: 7rem;
 	}
