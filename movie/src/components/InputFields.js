@@ -4,7 +4,6 @@ const InputFields = ({ labelVal, setInputVal, inputVal }) => {
   //state management
   //setting state with value entered by user
   const handleInput = (e) => {
-    console.log("e.target.value", e.target.value);
     setInputVal(e.target.value);
   };
 

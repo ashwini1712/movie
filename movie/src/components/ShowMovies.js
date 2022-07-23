@@ -17,10 +17,8 @@ const ShowMovies = ({ setPageHandle }) => {
   const handleSearch = (e) => {
     setSearch(e.target.value);
     let filteringArray = movies.filter((movie) => {
-      console.log(movie, e.target.value, movie.name);
-      console.log(search.includes(movie.name));
       if (select === "genre" && movie.genre.includes(search)) {
-        return movie;
+        return movie; //ternary operator can also do this {select === "genre"&& movie.genre.includes(search)}
       } else if (select === "name" && movie.name.includes(search)) {
         return movie;
       }
@@ -38,7 +36,6 @@ const ShowMovies = ({ setPageHandle }) => {
       }
     });
     setSearchArr(filteringArray);
-    console.log(searchArr, filteringArray);
   };
   //selects the option of select tag and store in select named state the search will be done based on state value
   const handleSelect = (e) => {

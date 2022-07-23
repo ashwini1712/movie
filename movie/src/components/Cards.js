@@ -11,7 +11,6 @@ const Cards = ({ movie }) => {
   const handleFavourite = (e) => {
     // handling favourite through checkbox click and changing value of favourite to true.
     //and pushing back to redux
-    console.log(e.target.checked, movie, movies.favourite);
     const favoriteData = movies.map((oneMovie) => {
       if (e.target.checked) {
         if (movie.id === oneMovie.id) {
@@ -22,12 +21,10 @@ const Cards = ({ movie }) => {
       return oneMovie;
     });
     dispatch(addFavourite(favoriteData)); //storing to redux
-    console.log("get fav", favoriteData);
   };
   const handleWatchlater = (e) => {
     // handling watchlater through checkbox click and changing value of favourite to true.
     //and pushing back to redux same as favourite
-    console.log(e.target.checked, movie, typeof movies.watchlater);
     const watchLater = movies.map((one) => {
       if (e.target.checked) {
         if (movie.id === one.id) {
@@ -38,16 +35,9 @@ const Cards = ({ movie }) => {
       return one;
     });
     dispatch(addWatchlater(watchLater)); //storing to redux
-    console.log("get fav", watchLater);
   };
   return (
     <div className="column is-one-quarter ">
-      {/* <input
-        type="checkbox"
-        id="heart"
-        placeholder="&#9829;"
-        onChange={handleFavourite}
-      /> */}
       {movie.favourite === true ? (
         <input
           type="checkbox"
