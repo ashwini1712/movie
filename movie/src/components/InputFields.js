@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
-const InputFields = ({ labelVal }) => {
+const InputFields = ({ labelVal, setInputVal, inputVal }) => {
   //state management
-  const [inputVal, setInputVal] = useState("");
   //setting state with value entered by user
   const handleInput = (e) => {
+    console.log("e.target.value", e.target.value);
     setInputVal(e.target.value);
-    // console.log("e.target.value", e.target.value);
   };
 
   return (
@@ -14,7 +13,7 @@ const InputFields = ({ labelVal }) => {
     <>
       <label>{labelVal}</label>
       <input
-        // to={labelVal}
+        to={labelVal}
         type="text"
         onChange={handleInput}
         value={inputVal}

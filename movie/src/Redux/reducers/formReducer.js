@@ -2,7 +2,10 @@ const initialValue = [];
 const formReducer = (state = initialValue, action) => {
   switch (action.type) {
     case "ADDFORM": {
-      return [action.payload];
+      return [...state, action.payload];
+    }
+    case "FAVOURITE": {
+      return action.payload;
     }
     default: {
       return state;

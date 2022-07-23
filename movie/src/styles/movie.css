@@ -18,7 +18,15 @@ input[type=text], select {
     border-radius: 4px;
     box-sizing: border-box;
   }
-  
+  input[type=search], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
   input[type=submit] {
     width: 100%;
     background-color: #4CAF50;
@@ -67,6 +75,7 @@ img {
 }
 .last {
 	margin-top: 6.5rem;
+	display:flex
 }
 .featured_wrapper {
 	position: relative;

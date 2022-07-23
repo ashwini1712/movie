@@ -4,3 +4,10 @@ export const addValues = (n) => {
     payload: n,
   };
 };
+
+export const addFavourite = (n) => {
+  return {
+    type: "FAVOURITE",
+    payload: n,
+  };
+};
