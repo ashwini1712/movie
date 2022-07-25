@@ -36,7 +36,6 @@ const AddMovie = ({ setPageHandle }) => {
   const handleSubmit = (e) => {
     // used to submit form taken from user to the redux
     e.preventDefault();
-    console.log(uuidv4());
     const formData = {
       id: uuidv4(), //giving unique key use from package uuid
       name: movieName,
