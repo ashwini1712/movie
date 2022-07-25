@@ -21,17 +21,16 @@ const ShowMovies = ({ setPageHandle }) => {
         return movie; //ternary operator can also do this {select === "genre"&& movie.genre.includes(search)}
       } else if (select === "name" && movie.name.includes(search)) {
         return movie;
-      }
-      if (select === "similar" && movie.similar.includes(search)) {
+      } else if (select === "similar" && movie.similar.includes(search)) {
         return movie;
-      }
-      if (select === "language" && movie.language.includes(search)) {
+      } else if (select === "language" && movie.language.includes(search)) {
         return movie;
-      }
-      if (select === "description" && movie.description.includes(search)) {
+      } else if (
+        select === "description" &&
+        movie.description.includes(search)
+      ) {
         return movie;
-      }
-      if (select === "" && movie.name.includes(search)) {
+      } else if (select === "" && movie.name.includes(search)) {
         return movie;
       }
     });
