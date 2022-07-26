@@ -15,22 +15,26 @@ const ShowMovies = ({ setPageHandle }) => {
 
   // ame, description, cast, similar movies, genre, language
   const handleSearch = (e) => {
+    let enteredStr = e.target.value;
+    enteredStr = enteredStr.toLowerCase();
+    console.log(enteredStr);
+    console.log(e.target.value, select, search);
     setSearch(e.target.value);
     let filteringArray = movies.filter((movie) => {
-      if (select === "genre" && movie.genre.includes(search)) {
-        return movie; //ternary operator can also do this {select === "genre"&& movie.genre.includes(search)}
-      } else if (select === "name" && movie.name.includes(search)) {
+      if (select === "genre" && movie.genre.includes(enteredStr)) {
+        return movie; //ternary operator can also do this {select === "genre"&& movie.genre.includes(enteredStr)}
+      } else if (select === "name" && movie.name.includes(enteredStr)) {
         return movie;
-      } else if (select === "similar" && movie.similar.includes(search)) {
+      } else if (select === "similar" && movie.similar.includes(enteredStr)) {
         return movie;
-      } else if (select === "language" && movie.language.includes(search)) {
+      } else if (select === "language" && movie.language.includes(enteredStr)) {
         return movie;
       } else if (
         select === "description" &&
-        movie.description.includes(search)
+        movie.description.includes(enteredStr)
       ) {
         return movie;
-      } else if (select === "" && movie.name.includes(search)) {
+      } else if (select === "" && movie.name.includes(enteredStr)) {
         return movie;
       }
     });
@@ -83,7 +87,7 @@ const ShowMovies = ({ setPageHandle }) => {
                   placeholder="Select from top and search By default search by Name"
                   type="search"
                   value={search}
-                  onChange={handleSearch}
+                  onInput={handleSearch}
                 />
               </div>
               <div
